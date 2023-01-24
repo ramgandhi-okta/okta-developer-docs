@@ -2,6 +2,7 @@ const BASE_PATH = '/docs/shared/';
 const PATH_LIKE = '(?:([^\/]*)\/?)';
 const FILE_LIKE = '(?:([^\.\/]*)\.?[^\.\/]*$)';
 
+// Keeping it simple - cataloging only top level files, No sub-folders
 const recordMeta = ({ contentInfo, page }) => { 
   const contentParts = new RegExp(`^${BASE_PATH}${FILE_LIKE}`);
   const [,contentName] = page.regularPath.match(contentParts);
